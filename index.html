@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TODO LIST</title>
+    <!-- Main Css -->
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="todoapp">
+      <header class="header">
+        <h1>TodoList</h1>
+        <input
+          class="new-todo"
+          placeholder="What needs to be done?"
+          autofocus
+        />
+      </header>
+      <!-- This section should be hidden by default and shown when there are todos -->
+      <section class="main">
+        <input
+            id="toggle-all"
+            class="toggle-all"
+            type="checkbox"
+            onchange="toggleAll(this.checked)"
+        />
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list"></ul>
+      </section>
+      <!-- This footer should hidden by default and shown when there are todos -->
+      <div class="footer">
+        <!-- This should be `0 items left` by default -->
+        <!-- Hidden if no completed items are left ↓ -->
+        <button class="clear-completed" onclick="clearAllCompleted()">Clear completed</button>
+      </div>
+    </section>
+    <!-- Script here -->
+    <script src="index.js"></script>
+  </body>
+</html>
